@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private PlayerDataSo data;
-    [SerializeField] private Animator animator;
+    public event Action onPlayerMove; 
+    public event Action onPlayerJump;
 
+    [SerializeField] private PlayerDataSo data;
     [SerializeField] private LayerMask layerGround;
+  
     private Rigidbody2D rb;
     private float playerSpeed = 0f;
     private float playerJumpForce = 0f;
@@ -24,27 +27,6 @@ public class PlayerMovement : MonoBehaviour
         playerJumpForce = data.jumpForce;
     }
 
-    private void Update()
-    {
-        //if (isGround)
-        //{
-        //    animator.SetBool("Jump", false);
-        //    animator.SetBool("Fall", false);
-        //    animator.SetBool("Ground", isGround);
-        //}
-        
-        //if (rb.linearVelocityY > 0 && !isGround)
-        //{
-        //    animator.SetBool("Jump", true);
-        //    animator.SetBool("Ground", false);
-        //}
-        //else if (rb.linearVelocityY < -0.1f && !isGround)
-        //{
-        //    animator.SetBool("Jump", false);
-        //    animator.SetBool("Fall", true);
-        //}
-    }
-
     private void FixedUpdate()
     {
         // Creo un rayo en la posicion del player mirando hacia abajo que detecte cuándo colisiono con el layer Ground
@@ -57,11 +39,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(data.moveLeft))
         {
             rb.linearVelocity = new Vector2(-1 * playerSpeed, rb.linearVelocity.y);
+            onPlayerMove?.Invoke();
         }
 
         if (Input.GetKey(data.moveRight))
         {
             rb.linearVelocity = new Vector2(1 * playerSpeed, rb.linearVelocity.y);
+            onPlayerMove?.Invoke();
         }
 
         // Si está en el suelo el player puede saltar
@@ -70,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(data.jump))
             {
                 rb.linearVelocity = new Vector2(0, 1) * playerJumpForce;
+                onPlayerJump?.Invoke();
             }
         }
     }
