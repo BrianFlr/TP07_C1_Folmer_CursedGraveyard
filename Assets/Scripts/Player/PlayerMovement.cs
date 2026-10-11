@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float playerSpeed = 0f;
     private float playerJumpForce = 0f;
-    private float rayCastLength = 0.52f;
+    private float rayCastLength = 0.73f;
     
     private bool isGround = false;
 
@@ -26,23 +26,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (isGround)
-        {
-            animator.SetBool("Jump", false);
-            animator.SetBool("Fall", false);
-            animator.SetBool("Ground", isGround);
-        }
+        //if (isGround)
+        //{
+        //    animator.SetBool("Jump", false);
+        //    animator.SetBool("Fall", false);
+        //    animator.SetBool("Ground", isGround);
+        //}
         
-        if (rb.linearVelocityY > 0 && !isGround)
-        {
-            animator.SetBool("Jump", true);
-            animator.SetBool("Ground", false);
-        }
-        else if (rb.linearVelocityY < -0.1f && !isGround)
-        {
-            animator.SetBool("Jump", false);
-            animator.SetBool("Fall", true);
-        }
+        //if (rb.linearVelocityY > 0 && !isGround)
+        //{
+        //    animator.SetBool("Jump", true);
+        //    animator.SetBool("Ground", false);
+        //}
+        //else if (rb.linearVelocityY < -0.1f && !isGround)
+        //{
+        //    animator.SetBool("Jump", false);
+        //    animator.SetBool("Fall", true);
+        //}
     }
 
     private void FixedUpdate()
@@ -53,19 +53,20 @@ public class PlayerMovement : MonoBehaviour
         // Si el rayo colisiona con el layer de Ground va a ser true y en caso contrario, false
         isGround = hit.collider != null;
 
-        // Si está en el suelo el player puede moverse y saltar
+        // Movimiento jugador
+        if (Input.GetKey(data.moveLeft))
+        {
+            rb.linearVelocity = new Vector2(-1 * playerSpeed, rb.linearVelocity.y);
+        }
+
+        if (Input.GetKey(data.moveRight))
+        {
+            rb.linearVelocity = new Vector2(1 * playerSpeed, rb.linearVelocity.y);
+        }
+
+        // Si está en el suelo el player puede saltar
         if (isGround)
         {
-            if (Input.GetKey(data.moveLeft))
-            {
-                rb.linearVelocity = new Vector2(-1, 0) * playerSpeed;
-            }
-
-            if (Input.GetKey(data.moveRight))
-            {
-                rb.linearVelocity = new Vector2(1, 0) * playerSpeed;
-            }
-
             if (Input.GetKey(data.jump))
             {
                 rb.linearVelocity = new Vector2(0, 1) * playerJumpForce;

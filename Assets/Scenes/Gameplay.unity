@@ -349,6 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800262581}
+  - component: {fileID: 800262582}
   - component: {fileID: 800262580}
   - component: {fileID: 800262579}
   m_Layer: 0
@@ -384,7 +385,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &800262580
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -431,13 +432,30 @@ Transform:
   m_GameObject: {fileID: 800262578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -2.816, z: 0}
+  m_LocalPosition: {x: 0.05, y: -2.854, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1279568968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800262582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800262578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be55ac06ee25147ae0f1287e324471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  data: {fileID: 11400000, guid: 938c5b8782210264ba413eb9b2af8e70, type: 2}
+  animator: {fileID: 1223249880}
+  layerGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &855863674
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +644,7 @@ GameObject:
   - component: {fileID: 1568830650}
   - component: {fileID: 1568830649}
   - component: {fileID: 1568830651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
