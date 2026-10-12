@@ -9,7 +9,7 @@ public class DaggerObjectPool : MonoBehaviour
     [Header("Pool Prefab")]
     [SerializeField] GameObject daggerPrefab;
 
-    private float minimumAmount = 5f;
+    private float minimumAmount = 8f;
 
     // Creo una lista de GameObjects
     private List<GameObject> daggerPool = new List<GameObject>();

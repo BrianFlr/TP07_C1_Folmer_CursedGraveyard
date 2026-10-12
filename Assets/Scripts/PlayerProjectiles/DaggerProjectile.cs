@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Dagger : MonoBehaviour
+public class DaggerProjectile : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private PlayerProjectilesDataSo data;
@@ -29,16 +29,20 @@ public class Dagger : MonoBehaviour
 
     private void Update()
     {
+        // Timer del tiempo de vida de la daga.
         daggerLifeTimer += Time.deltaTime;
 
         if (daggerLifeTimer >= daggerLifeTime)
         {
             gameObject.SetActive(false);
-            trailRenderer.emitting = false;
+            trailRenderer.Clear();
+
+            daggerLifeTimer = 0f;
         }
     }
 
-    public void ThrowDagger(int sign)
+    // Función para impulsar la daga.
+    public void ImpulseDagger(int sign)
     {
         Vector3 direction = new Vector3(sign, 0, 0).normalized;
         rb.AddForce(direction * daggerSpeed, ForceMode2D.Impulse);

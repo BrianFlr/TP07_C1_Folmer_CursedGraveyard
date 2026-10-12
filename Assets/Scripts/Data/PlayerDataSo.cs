@@ -9,7 +9,7 @@ public class PlayerDataSo : ScriptableObject
     public KeyCode jump = KeyCode.Space;
     public KeyCode moveRight = KeyCode.D;
     public KeyCode moveLeft = KeyCode.A;
-    public MouseButton throwDagger = MouseButton.Left;
+    public MouseButton throwProjectile = MouseButton.Left;
 
     [Header("Stats")]
     [Range (1,150)]public int health = 100;
