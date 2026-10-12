@@ -1,9 +1,8 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimationHandle : MonoBehaviour
 {
-    [SerializeField] private PlayerController playerController;
+    [SerializeField] private PlayerMovement playerController;
     [SerializeField] private Animator playerAnimator;
     private Rigidbody2D playerRb;
 
