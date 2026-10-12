@@ -5,52 +5,44 @@ public class PlayerAnimationHandle : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
     [SerializeField] private Animator playerAnimator;
+    private Rigidbody2D playerRb;
+
+    private bool isGround;
 
     private void Awake()
     {
-        playerController.onPlayerMove += PlayAnimationRun;
-        playerController.onPlayerJump += PlayAnimationJump;
+        playerRb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        //if (isGround)
-        //{
-        //    animator.SetBool("Jump", false);
-        //    animator.SetBool("Fall", false);
-        //    animator.SetBool("Ground", isGround);
-        //}
+        isGround = playerController.GetIsGroundState();
 
-        //if (rb.linearVelocityY > 0 && !isGround)
-        //{
-        //    animator.SetBool("Jump", true);
-        //    animator.SetBool("Ground", false);
-        //}
-        //else if (rb.linearVelocityY < -0.1f && !isGround)
-        //{
-        //    animator.SetBool("Jump", false);
-        //    animator.SetBool("Fall", true);
-        //}    
-    }
+        if (isGround)
+        {
+            playerAnimator.SetBool("Jump", false);
+            playerAnimator.SetBool("Fall", false);
+            playerAnimator.SetBool("Ground", isGround);
+        }
 
-    private void OnDestroy()
-    {
-        playerController.onPlayerMove -= PlayAnimationRun;
-        playerController.onPlayerJump -= PlayAnimationJump;
-    }
+        if (playerRb.linearVelocityY > 0 && !isGround)
+        {
+            playerAnimator.SetBool("Jump", true);
+            playerAnimator.SetBool("Ground", false);
+        }
+        else if (playerRb.linearVelocityY < -0.1f && !isGround)
+        {
+            playerAnimator.SetBool("Jump", false);
+            playerAnimator.SetBool("Fall", true);
+        }
 
-    private void PlayAnimationRun()
-    {
-        playerAnimator.SetTrigger("Move");
-    }
-
-    private void PlayAnimationJump()
-    {
-        playerAnimator.SetBool("Jump", true);
-    }
-
-    private void PlayAnimationAttack()
-    {
-
+        if (Mathf.Abs(playerRb.linearVelocityX) > 0 && isGround)
+        {
+            playerAnimator.SetBool("Run", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Run", false);
+        }
     }
 }

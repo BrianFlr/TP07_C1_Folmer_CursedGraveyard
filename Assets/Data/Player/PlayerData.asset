@@ -18,4 +18,4 @@ MonoBehaviour:
   throwDagger: 0
   health: 100
   speed: 4
-  jumpForce: 6
+  jumpForce: 8

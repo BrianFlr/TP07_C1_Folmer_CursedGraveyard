@@ -14,5 +14,5 @@ public class PlayerDataSo : ScriptableObject
     [Header("Stats")]
     [Range (1,150)]public int health = 100;
     [Range(3, 10)] public float speed = 4f;
-    [Range(3, 10)] public float jumpForce = 6f;
+    [Range(3, 10)] public float jumpForce = 8f;
 }

@@ -39,13 +39,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(data.moveLeft))
         {
             rb.linearVelocity = new Vector2(-1 * playerSpeed, rb.linearVelocity.y);
-            onPlayerMove?.Invoke();
         }
 
         if (Input.GetKey(data.moveRight))
         {
             rb.linearVelocity = new Vector2(1 * playerSpeed, rb.linearVelocity.y);
-            onPlayerMove?.Invoke();
         }
 
         // Si está en el suelo el player puede saltar
@@ -54,7 +52,6 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(data.jump))
             {
                 rb.linearVelocity = new Vector2(0, 1) * playerJumpForce;
-                onPlayerJump?.Invoke();
             }
         }
     }
@@ -63,5 +60,10 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * rayCastLength);
+    }
+
+    public bool GetIsGroundState()
+    {
+        return isGround;
     }
 }
