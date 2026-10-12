@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public event Action onPlayerMove; 
-    public event Action onPlayerJump;
-
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private LayerMask layerGround;
   
@@ -39,11 +36,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(data.moveLeft))
         {
             rb.linearVelocity = new Vector2(-1 * playerSpeed, rb.linearVelocity.y);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         if (Input.GetKey(data.moveRight))
         {
             rb.linearVelocity = new Vector2(1 * playerSpeed, rb.linearVelocity.y);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
         // Si está en el suelo el player puede saltar

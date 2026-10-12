@@ -43,10 +43,12 @@ public class PlayerAnimationHandle : MonoBehaviour
         if (Mathf.Abs(playerRb.linearVelocityX) > 0 && isGround)
         {
             playerAnimator.SetBool("Run", true);
+            playerAnimator.SetBool("Idle", false);
         }
         else
         {
             playerAnimator.SetBool("Run", false);
+            playerAnimator.SetBool("Idle", true);
         }
     }
 

@@ -15,8 +15,15 @@ public class PlayerThrowAttack : MonoBehaviour
     [Header("Throw Point")]
     [SerializeField] private Transform throwPoint;
 
+    private Rigidbody2D rb;
+
     private float daggerThrowRate = 0f;
     private float daggerNextThrowTime = 0f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {

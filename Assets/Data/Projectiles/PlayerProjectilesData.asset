@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b521ad527dd165542813912f146edf43, type: 3}
   m_Name: PlayerProjectilesData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectilesDataSo
-  daggerSpeed: 4
+  daggerSpeed: 5
   daggerDamage: 10
   daggerLifeTime: 2
-  daggerThrowRate: 0.8
+  daggerThrowRate: 0.5

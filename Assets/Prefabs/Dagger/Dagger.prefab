@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3118427112510820432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 9133067709469980480}
   - component: {fileID: 5209535378887337002}
   - component: {fileID: 4430583723630078205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 233070484637269369}
   - component: {fileID: 1481592607861224206}
   - component: {fileID: 7418595193482435031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DaggerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.07052612
+        value: 0.07977295
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -304,7 +304,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.98339844
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0

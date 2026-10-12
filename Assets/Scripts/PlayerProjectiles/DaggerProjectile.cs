@@ -45,6 +45,7 @@ public class DaggerProjectile : MonoBehaviour
     public void ImpulseDagger(int sign)
     {
         Vector3 direction = new Vector3(sign, 0, 0).normalized;
+        transform.right = direction;
         rb.AddForce(direction * daggerSpeed, ForceMode2D.Impulse);
     }
 }

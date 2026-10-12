@@ -1908,7 +1908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecad8c3b364667947afa78fde1151bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationHandle
-  playerController: {fileID: 800262582}
   playerAnimator: {fileID: 1223249880}
 --- !u!114 &800262584
 MonoBehaviour:
@@ -3214,7 +3213,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5010287565412364656, guid: a8cd0b0b2ad27ab4aa5a6a70db8f3e65, type: 3}
+  m_Sprite: {fileID: 8793639957104055765, guid: 7456a1688d786604797ec9e1af712dcf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
