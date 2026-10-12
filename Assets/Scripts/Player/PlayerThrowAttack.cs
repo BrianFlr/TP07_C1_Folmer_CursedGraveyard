@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerThrowAttack : MonoBehaviour
 {
+    public event Action onPlayerAttack;
+
     [Header("Data")]
     [SerializeField] private PlayerDataSo playerData;
     [SerializeField] private PlayerProjectilesDataSo projectilesData;
@@ -35,6 +37,8 @@ public class PlayerThrowAttack : MonoBehaviour
     // Función para spawnear la daga y luego impulsarla.
     private void ThrowDagger()
     {
+        onPlayerAttack?.Invoke();
+
         daggerNextThrowTime = Time.time + daggerThrowRate;
 
         // Tomo un objeto de la pool

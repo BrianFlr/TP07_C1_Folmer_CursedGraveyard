@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerAnimationHandle : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement playerController;
+    private PlayerMovement movementScript;
+    private PlayerThrowAttack throwAttackScript;
     [SerializeField] private Animator playerAnimator;
     private Rigidbody2D playerRb;
 
@@ -11,11 +12,15 @@ public class PlayerAnimationHandle : MonoBehaviour
     private void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        movementScript = GetComponent<PlayerMovement>();
+        throwAttackScript = GetComponent<PlayerThrowAttack>();
+
+        throwAttackScript.onPlayerAttack += PlayAttackAnimation;
     }
 
     void Update()
     {
-        isGround = playerController.GetIsGroundState();
+        isGround = movementScript.GetIsGroundState();
 
         if (isGround)
         {
@@ -43,5 +48,15 @@ public class PlayerAnimationHandle : MonoBehaviour
         {
             playerAnimator.SetBool("Run", false);
         }
+    }
+
+    private void OnDestroy()
+    {
+        throwAttackScript.onPlayerAttack -= PlayAttackAnimation;
+    }
+
+    private void PlayAttackAnimation()
+    {
+        playerAnimator.SetTrigger("Attack");
     }
 }
