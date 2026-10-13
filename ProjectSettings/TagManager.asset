@@ -41,14 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background_2
+  - name: BackgroundSky
+    uniqueID: 537529075
+    locked: 0
+  - name: BackgroundBack
     uniqueID: 2150535381
     locked: 0
-  - name: Background_1
-    uniqueID: 1570765293
+  - name: BackBushes
+    uniqueID: 78378035
     locked: 0
-  - name: Background_0
-    uniqueID: 694096205
+  - name: Bars
+    uniqueID: 2759948573
+    locked: 0
+  - name: Statue
+    uniqueID: 1570765293
     locked: 0
   - name: Ground
     uniqueID: 2796918157
@@ -61,6 +67,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 254959923
+    locked: 0
+  - name: FrontBushes
+    uniqueID: 55228359
     locked: 0
   m_RenderingLayers:
   - Default
