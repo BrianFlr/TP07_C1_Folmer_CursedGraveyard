@@ -47,13 +47,16 @@ TagManager:
   - name: BackgroundBack
     uniqueID: 2150535381
     locked: 0
-  - name: BackBushes
+  - name: BackgroundRocks
+    uniqueID: 94079997
+    locked: 0
+  - name: BackgroundBackBushes
     uniqueID: 78378035
     locked: 0
-  - name: Bars
+  - name: BackgroundBars
     uniqueID: 2759948573
     locked: 0
-  - name: Statue
+  - name: BackgroundStatue
     uniqueID: 1570765293
     locked: 0
   - name: Ground
@@ -68,7 +71,7 @@ TagManager:
   - name: Player
     uniqueID: 254959923
     locked: 0
-  - name: FrontBushes
+  - name: ForegroundFrontBushes
     uniqueID: 55228359
     locked: 0
   m_RenderingLayers:
