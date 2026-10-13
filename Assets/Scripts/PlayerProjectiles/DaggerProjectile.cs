@@ -41,6 +41,12 @@ public class DaggerProjectile : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        gameObject.SetActive(false);
+        trailRenderer.Clear();
+    }
+
     // Función para impulsar la daga.
     public void ImpulseDagger(int sign)
     {

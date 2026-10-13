@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3118427112510820432}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 9133067709469980480}
   - component: {fileID: 5209535378887337002}
   - component: {fileID: 4430583723630078205}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 233070484637269369}
   - component: {fileID: 1481592607861224206}
   - component: {fileID: 7418595193482435031}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: DaggerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 882720533
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1872732258777413398, guid: c27e12915c1e60d469448b9c04eabd45, type: 3}
@@ -283,7 +283,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -427149227
-  m_SortingLayer: 5
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Time: 0.1
