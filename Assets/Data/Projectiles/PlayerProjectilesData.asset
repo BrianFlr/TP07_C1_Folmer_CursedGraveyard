@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectilesDataSo
   daggerSpeed: 5
   daggerDamage: 10
-  daggerLifeTime: 2
+  daggerLifeTime: 1.5
   daggerThrowRate: 0.5

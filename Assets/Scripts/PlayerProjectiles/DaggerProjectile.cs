@@ -20,7 +20,7 @@ public class DaggerProjectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         daggerSpeed = data.daggerSpeed;
         daggerDamage = data.daggerDamage;
