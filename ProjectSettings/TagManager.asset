@@ -44,8 +44,11 @@ TagManager:
   - name: BackgroundSky
     uniqueID: 537529075
     locked: 0
-  - name: BackgroundBack
+  - name: BackgroundChapels
     uniqueID: 2150535381
+    locked: 0
+  - name: BackgroundGrass
+    uniqueID: 363914637
     locked: 0
   - name: BackgroundRocks
     uniqueID: 94079997
