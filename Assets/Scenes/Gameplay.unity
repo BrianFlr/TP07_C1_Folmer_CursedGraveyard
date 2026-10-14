@@ -2759,7 +2759,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 938c5b8782210264ba413eb9b2af8e70, type: 2}
   layerGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
 --- !u!114 &800262583
 MonoBehaviour:
   m_ObjectHideFlags: 0
