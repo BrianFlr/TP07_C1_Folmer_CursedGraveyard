@@ -24,7 +24,6 @@ public class PlayerAnimationHandle : MonoBehaviour
 
         if (isGround)
         {
-            playerAnimator.SetBool("Jump", false);
             playerAnimator.SetBool("Fall", false);
             playerAnimator.SetBool("Ground", isGround);
         }
