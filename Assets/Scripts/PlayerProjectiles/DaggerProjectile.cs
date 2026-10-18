@@ -10,8 +10,8 @@ public class DaggerProjectile : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    [SerializeField] private float daggerSpeed = 0f;
-    [SerializeField] private int daggerDamage = 0;
+    private float daggerSpeed = 0f;
+    private float daggerDamage = 0f;
     private float daggerLifeTime = 0f;
     private float daggerLifeTimer = 0f;
 
@@ -41,18 +41,17 @@ public class DaggerProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         EnemySkeletonHealth skeleton = other.GetComponent<EnemySkeletonHealth>();
-        //EnemyGhost ghost = other.GetComponent<EnemyGhost>();
+        EnemyGhostHealth ghost = other.GetComponent<EnemyGhostHealth>();
 
         if (skeleton != null )
         {
-            skeleton.DoDamage(daggerDamage);
+            skeleton.ReceiveDamage(daggerDamage);
         }
 
-        //if (ghost != null )
-        //{
-        //    ghost.DoDamage(daggerDamage);
-        //    DesactiveDagger();
-        //}
+        if (ghost != null)
+        {
+            ghost.ReceiveDamage(daggerDamage);
+        }
 
         DesactiveDagger();
     }

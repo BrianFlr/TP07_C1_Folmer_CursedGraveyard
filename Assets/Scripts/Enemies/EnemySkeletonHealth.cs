@@ -4,20 +4,20 @@ using UnityEngine.UI;
 public class EnemySkeletonHealth : MonoBehaviour
 {
     [SerializeField] private EnemiesDataSo skeletonData;
-    [SerializeField] private Image healthBar;
+    [SerializeField] private Image fillHealthBar;
 
-    [SerializeField] private int health = 0;
+    [SerializeField] private float health = 0f;
 
-    void Start()
+    private void Start()
     {
         health = skeletonData.skeletonHealth;
     }
 
     // Función para recibir daño.
-    public void DoDamage(int damageAmount)
+    public void ReceiveDamage(float damageAmount)
     {
         health -= damageAmount;
-        healthBar.fillAmount = health / skeletonData.skeletonHealth;
+        fillHealthBar.fillAmount = health / skeletonData.skeletonHealth;
 
         if (health < 1)
         {

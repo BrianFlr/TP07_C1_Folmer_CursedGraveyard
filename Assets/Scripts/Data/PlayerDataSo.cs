@@ -12,7 +12,7 @@ public class PlayerDataSo : ScriptableObject
     public MouseButton throwProjectile = MouseButton.Left;
 
     [Header("Stats")]
-    [Range (1,150)]public int health = 100;
-    [Range(3, 10)] public float speed = 4f;
-    [Range(3, 10)] public float jumpForce = 8f;
+    [Range (1,150)]public float health = 100.0f;
+    [Range(3, 10)] public float speed = 4.0f;
+    [Range(3, 10)] public float jumpForce = 8.0f;
 }
