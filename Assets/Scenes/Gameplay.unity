@@ -5541,6 +5541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1210048945}
+  - component: {fileID: 1210048947}
   - component: {fileID: 1210048946}
   m_Layer: 0
   m_Name: EnemyGhost
@@ -5603,6 +5604,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07615042, y: -0.108786345}
   m_Size: {x: 0.5217581, y: 1.3698728}
   m_Direction: 0
+--- !u!114 &1210048947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210048944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfdd791e3fbae464da8d47647ef139e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGhostHealth
+  ghostData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
 --- !u!1 &1216297685
 GameObject:
   m_ObjectHideFlags: 0
@@ -9136,6 +9150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767932128}
+  - component: {fileID: 1767932131}
   - component: {fileID: 1767932130}
   - component: {fileID: 1767932129}
   m_Layer: 0
@@ -9226,6 +9241,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.14461064}
   m_Size: {x: 0.5, y: 1.266974}
   m_Direction: 0
+--- !u!114 &1767932131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767932127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad6917624632fc45883f6dbc30cd49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySkeletonHealth
+  skeletonData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
 --- !u!1 &1825928763
 GameObject:
   m_ObjectHideFlags: 0
