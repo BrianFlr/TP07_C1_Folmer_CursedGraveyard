@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyGhostHealth : MonoBehaviour
 {
     [SerializeField] private EnemiesDataSo ghostData;
+    [SerializeField] private Image healthBar;
 
     private int health = 0;
 
@@ -15,5 +17,6 @@ public class EnemyGhostHealth : MonoBehaviour
     public void DoDamage(int damageAmount)
     {
         health -= damageAmount;
+        healthBar.fillAmount = health / ghostData.ghostHealth;
     }
 }
