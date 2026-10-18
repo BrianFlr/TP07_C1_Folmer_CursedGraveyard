@@ -11,7 +11,7 @@ public class DaggerProjectile : MonoBehaviour
     private Rigidbody2D rb;
 
     private float daggerSpeed = 0f;
-    private float daggerDamage = 0f;
+    private int daggerDamage = 0;
     private float daggerLifeTime = 0f;
     private float daggerLifeTimer = 0f;
 
@@ -34,14 +34,31 @@ public class DaggerProjectile : MonoBehaviour
 
         if (daggerLifeTimer >= daggerLifeTime)
         {
-            gameObject.SetActive(false);
-            trailRenderer.Clear();
-
+            DesactiveDagger();
             daggerLifeTimer = 0f;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        EnemySkeleton skeleton = other.GetComponent<EnemySkeleton>();
+        //EnemyGhost ghost = other.GetComponent<EnemyGhost>();
+
+        if (skeleton != null )
+        {
+            skeleton.DoDamage(daggerDamage);
+        }
+
+        //if (ghost != null )
+        //{
+        //    ghost.DoDamage(daggerDamage);
+        //    DesactiveDagger();
+        //}
+
+        DesactiveDagger();
+    }
+
+    private void DesactiveDagger()
     {
         gameObject.SetActive(false);
         trailRenderer.Clear();
@@ -54,4 +71,6 @@ public class DaggerProjectile : MonoBehaviour
         transform.right = direction;
         rb.AddForce(direction * daggerSpeed, ForceMode2D.Impulse);
     }
+
+    
 }
