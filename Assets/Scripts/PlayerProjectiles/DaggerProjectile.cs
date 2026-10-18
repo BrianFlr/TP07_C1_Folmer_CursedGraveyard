@@ -41,7 +41,7 @@ public class DaggerProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        EnemySkeleton skeleton = other.GetComponent<EnemySkeleton>();
+        EnemySkeletonHealth skeleton = other.GetComponent<EnemySkeletonHealth>();
         //EnemyGhost ghost = other.GetComponent<EnemyGhost>();
 
         if (skeleton != null )
