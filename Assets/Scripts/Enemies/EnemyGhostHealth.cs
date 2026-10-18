@@ -5,6 +5,7 @@ public class EnemyGhostHealth : MonoBehaviour
 {
     [SerializeField] private EnemiesDataSo ghostData;
     [SerializeField] private Image healthBar;
+    [SerializeField] private GameObject enemyDeathEffectPrefab;
 
     private float health = 0f;
 
@@ -19,8 +20,14 @@ public class EnemyGhostHealth : MonoBehaviour
         health -= damageAmount;
         healthBar.fillAmount = health / ghostData.ghostHealth;
 
+        Die();
+    }
+
+    private void Die()
+    {
         if (health < 1)
         {
+            Instantiate(enemyDeathEffectPrefab, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
     }

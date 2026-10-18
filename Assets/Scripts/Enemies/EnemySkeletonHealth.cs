@@ -5,6 +5,7 @@ public class EnemySkeletonHealth : MonoBehaviour
 {
     [SerializeField] private EnemiesDataSo skeletonData;
     [SerializeField] private Image fillHealthBar;
+    [SerializeField] private GameObject enemyDeathEffectPrefab;
 
     [SerializeField] private float health = 0f;
 
@@ -19,14 +20,15 @@ public class EnemySkeletonHealth : MonoBehaviour
         health -= damageAmount;
         fillHealthBar.fillAmount = health / skeletonData.skeletonHealth;
 
-        if (health < 1)
-        {
-            gameObject.SetActive(false);
-        }
+        Die();
     }
 
     private void Die()
     {
-
+        if (health < 1)
+        {
+            Instantiate(enemyDeathEffectPrefab, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+        }
     }
 }
