@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3118427112510820432}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 233070484637269369}
   - component: {fileID: 1481592607861224206}
   - component: {fileID: 7418595193482435031}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DaggerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

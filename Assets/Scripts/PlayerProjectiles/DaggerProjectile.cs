@@ -10,8 +10,8 @@ public class DaggerProjectile : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private float daggerSpeed = 0f;
-    private int daggerDamage = 0;
+    [SerializeField] private float daggerSpeed = 0f;
+    [SerializeField] private int daggerDamage = 0;
     private float daggerLifeTime = 0f;
     private float daggerLifeTimer = 0f;
 
@@ -35,7 +35,6 @@ public class DaggerProjectile : MonoBehaviour
         if (daggerLifeTimer >= daggerLifeTime)
         {
             DesactiveDagger();
-            daggerLifeTimer = 0f;
         }
     }
 
@@ -62,6 +61,7 @@ public class DaggerProjectile : MonoBehaviour
     {
         gameObject.SetActive(false);
         trailRenderer.Clear();
+        daggerLifeTimer = 0f;
     }
 
     // Función para impulsar la daga.

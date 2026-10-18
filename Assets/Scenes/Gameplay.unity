@@ -1272,6 +1272,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261339286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &391765347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 415417453011977287, guid: 98065bceff3c7884f831ee457add4582, type: 3}
+  m_PrefabInstance: {fileID: 9191163545750770947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &403775490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,7 +5554,7 @@ GameObject:
   - component: {fileID: 1210048945}
   - component: {fileID: 1210048947}
   - component: {fileID: 1210048946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyGhost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5617,6 +5628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGhostHealth
   ghostData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
+  healthBar: {fileID: 6795660415272283310}
 --- !u!1 &1216297685
 GameObject:
   m_ObjectHideFlags: 0
@@ -9153,7 +9165,7 @@ GameObject:
   - component: {fileID: 1767932131}
   - component: {fileID: 1767932130}
   - component: {fileID: 1767932129}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9203,7 +9215,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1767932130
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9254,6 +9266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySkeletonHealth
   skeletonData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
+  healthBar: {fileID: 391765347}
+  health: 0
 --- !u!1 &1825928763
 GameObject:
   m_ObjectHideFlags: 0
@@ -14573,6 +14587,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6345711110934589299, guid: 6b256b7cf9df48244bfc36f9add4a11d, type: 3}
   m_PrefabInstance: {fileID: 5375331577763235174}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6795660415272283310 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 415417453011977287, guid: 98065bceff3c7884f831ee457add4582, type: 3}
+  m_PrefabInstance: {fileID: 711157764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &9191163545750770947
 PrefabInstance:
   m_ObjectHideFlags: 0

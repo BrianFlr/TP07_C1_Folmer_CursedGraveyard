@@ -6,7 +6,7 @@ public class EnemySkeletonHealth : MonoBehaviour
     [SerializeField] private EnemiesDataSo skeletonData;
     [SerializeField] private Image healthBar;
 
-    private int health = 0;
+    [SerializeField] private int health = 0;
 
     void Start()
     {
