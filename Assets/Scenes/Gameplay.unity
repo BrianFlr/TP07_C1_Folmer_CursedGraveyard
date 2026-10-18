@@ -3884,7 +3884,7 @@ MonoBehaviour:
     ScreenPosition: {x: -0.0000005662441, y: 0.00000011920929}
     DeadZone:
       Enabled: 1
-      Size: {x: 0.064055204, y: 0.25}
+      Size: {x: 0.05, y: 0.25}
     HardLimits:
       Enabled: 1
       Size: {x: 0.8, y: 1.12}
@@ -5099,9 +5099,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1184526019}
+  - component: {fileID: 1184526020}
   - component: {fileID: 1184526018}
   m_Layer: 0
-  m_Name: background_nightsky_0
+  m_Name: BackgroundSky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5152,8 +5153,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 537529075
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -450778748309165741, guid: b6e8e1e509f87154caf2eae45ab68f17, type: 3}
@@ -5175,12 +5176,24 @@ Transform:
   m_GameObject: {fileID: 1184526017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.68, z: 0}
-  m_LocalScale: {x: 2.69, y: 2.69, z: 2.69}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.7, y: 2.7, z: 2.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184526020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184526017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e570b2756d33a45a7f91bac821c60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowCameraPosition
 --- !u!1 &1190278059
 GameObject:
   m_ObjectHideFlags: 0
@@ -14735,6 +14748,7 @@ SceneRoots:
   - {fileID: 924905467}
   - {fileID: 1541115817}
   - {fileID: 855863675}
+  - {fileID: 1184526019}
   - {fileID: 2067245461}
   - {fileID: 898347616}
   - {fileID: 987177205}
@@ -14751,7 +14765,6 @@ SceneRoots:
   - {fileID: 1219450493}
   - {fileID: 986360356}
   - {fileID: 2097510002}
-  - {fileID: 1184526019}
   - {fileID: 1767932128}
   - {fileID: 1210048945}
   - {fileID: 1460784110}
