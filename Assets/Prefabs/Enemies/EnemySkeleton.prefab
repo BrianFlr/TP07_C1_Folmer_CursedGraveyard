@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4879384875095609189}
   - component: {fileID: 7153532559400489176}
   - component: {fileID: 7081738955343926603}
+  - component: {fileID: 2667872626749391574}
   - component: {fileID: 5726487898145123082}
   - component: {fileID: 7136647742217497830}
   m_Layer: 9
@@ -82,6 +83,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySkeletonDamage
   skeletonData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
+--- !u!114 &2667872626749391574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956827665592062969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200fd3cc8190613499aae88c35daaa4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyPickableDrop
+  pickables:
+  - {fileID: 6631840557305376259, guid: ce6973e23918b6847b66547541abb585, type: 3}
+  - {fileID: 7504088381209475271, guid: 89160350d11dfca42b611fd7192886a0, type: 3}
+  - {fileID: 8728331695166075506, guid: a9c60a9c0b886cd4194a8d6636bec84b, type: 3}
 --- !u!70 &5726487898145123082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

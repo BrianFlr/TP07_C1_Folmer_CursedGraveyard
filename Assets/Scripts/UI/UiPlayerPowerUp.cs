@@ -22,7 +22,7 @@ public class UiPlayerPowerUp : MonoBehaviour
 
         // Muestro el tiempo activo de los power ups
         powerUpSeconds = GameManager.Instance.GetPowerUpTimer();*/
-        TimeSpan timePowerUp = TimeSpan.FromSeconds(powerUpSeconds);
-        textTimePowerUp.text = timePowerUp.ToString(@"mm\:ss");
+        //TimeSpan timePowerUp = TimeSpan.FromSeconds(powerUpSeconds);
+        //textTimePowerUp.text = timePowerUp.ToString(@"mm\:ss");
     }
 }

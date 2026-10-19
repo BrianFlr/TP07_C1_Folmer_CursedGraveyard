@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemySkeletonHealth : MonoBehaviour
 {
+    public event Action onSkeletonDie;
+
     [SerializeField] private EnemiesDataSo skeletonData;
     [SerializeField] private Image fillHealthBar;
     [SerializeField] private GameObject enemyDeathEffectPrefab;
@@ -27,6 +30,8 @@ public class EnemySkeletonHealth : MonoBehaviour
     {
         if (health < 1)
         {
+            onSkeletonDie?.Invoke();
+
             Instantiate(enemyDeathEffectPrefab, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
