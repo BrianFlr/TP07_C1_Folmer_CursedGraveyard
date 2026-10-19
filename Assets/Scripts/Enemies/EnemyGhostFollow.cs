@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class EnemyGhostFollow : MonoBehaviour
 {
-    [SerializeField] private EnemiesDataSo ghostData; 
+    [SerializeField] private EnemiesDataSo ghostData;
     [SerializeField] private LayerMask playerMask;
     private Transform playerTransform;
+    private Rigidbody2D rb;
     
     private GhostStateMovement actualState = GhostStateMovement.Wait;
     private float speed = 0f;
@@ -16,8 +17,12 @@ public class EnemyGhostFollow : MonoBehaviour
     public enum GhostStateMovement
     {
         Wait,
-        Follow,
-        Return
+        Follow
+    }
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -37,8 +42,6 @@ public class EnemyGhostFollow : MonoBehaviour
                 break;
             case GhostStateMovement.Follow:
                 FollowState();
-                break;
-            case GhostStateMovement.Return:
                 break;
         }
     }
@@ -70,12 +73,8 @@ public class EnemyGhostFollow : MonoBehaviour
     // Función del estado de seguir del enemigo.
     private void FollowState()
     {
-        if (playerTransform == null)
-        {
-            actualState = GhostStateMovement.Return;
-            return;
-        }
-
-        transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, maxDistance);
+        // Obtengo la dirección y muevo al enemigo a esa posición.
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
     }
 }

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8484772e2350d6a438d7f4d03482042a, type: 3}
   m_Name: EnemiesData
   m_EditorClassIdentifier: Assembly-CSharp::EnemiesDataSo
-  skeletonHealth: 20
+  skeletonHealth: 15
   skeletonSpeed: 2
-  ghostHealth: 30
+  ghostHealth: 25
+  ghostSpeed: 0.5
+  ghostAggroRange: 5.5

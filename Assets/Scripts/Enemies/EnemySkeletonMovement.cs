@@ -33,8 +33,23 @@ public class EnemySkeletonMovement : MonoBehaviour
             speed *= -1;
         }
 
-        rb.linearVelocity = new Vector2(-1,0) * speed;
+        SkeletonMove(speed);
+        SkeletonRotate();
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + rayCastLength * transform.right * -1);
+    }
+
+    private void SkeletonMove(float speed)
+    {
+        rb.linearVelocity = new Vector2(-1, 0) * speed;
+    }
+
+    private void SkeletonRotate()
+    {
         if (rb.linearVelocityX < 0)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -43,11 +58,5 @@ public class EnemySkeletonMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + rayCastLength * transform.right * -1);
     }
 }
