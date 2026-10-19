@@ -1,20 +1,15 @@
-using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public event Action onPlayerPointsChange;
-    public event Action onCollectablePicked;
-    public event Action onGameWin;
-    public event Action onGameOver;
-
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerPoints playerPoints;
     //[SerializeField] private DaggerProjectile daggerProjectile;
-
-    private float playerPoints = 0;
     private int collectableCounter = 0;
+    private bool isGameWin = false;
+    private bool isGameOver = false;
 
     private void Awake()
     {
@@ -28,47 +23,60 @@ public class GameManager : MonoBehaviour
         }
 
         playerHealth.onPlayerHealthChange += GameOver;
-        onCollectablePicked += GameWin;
     }
 
     private void OnDestroy()
     {
         playerHealth.onPlayerHealthChange -= GameOver;
-        onCollectablePicked -= GameWin;
     }
 
     public void SetCollectablePickedCounter()
     {
         collectableCounter++;
 
-        onCollectablePicked?.Invoke();
+        GameWin();
     }
 
     private void GameWin()
     {
         if(collectableCounter == 3)
         {
-            onGameWin?.Invoke();
+            isGameWin = true;
         }
+    }
+
+    public bool GetIsGameWinState()
+    {
+        return isGameWin;
     }
 
     private void GameOver()
     {
         if (playerHealth.GetHealthValue() < 1)
         {
-            onGameOver?.Invoke();
+            isGameOver = true;
         }
     }
 
-    public void AddPlayerPoints(float pointsAmount)
+    public bool GetIsGameOverState()
     {
-        playerPoints += pointsAmount;
+        return isGameOver;
+    }
 
-        onPlayerPointsChange?.Invoke();
+    public void ResetGameState()
+    {
+        isGameWin = false;
+        isGameOver = false;
+        collectableCounter = 0;
+    }
+
+    public void AddPlayerPoints(float pointsValue)
+    {
+        playerPoints.AddPlayerPoints(pointsValue);
     }
 
     public float GetPlayerPoints()
     {
-        return playerPoints;
+        return playerPoints.GetPlayerPointsValue();
     }
 }

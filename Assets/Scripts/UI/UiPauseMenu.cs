@@ -102,6 +102,8 @@ public class UiPauseMenu : MonoBehaviour
 
         // Cargo la escena "MainMenu"
         SceneManager.LoadScene("MainMenu");
+
+        GameManager.Instance.ResetGameState();
     }
 
     // Función que resetea el estado de pausa

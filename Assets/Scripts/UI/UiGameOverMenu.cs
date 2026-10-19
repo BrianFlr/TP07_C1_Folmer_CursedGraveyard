@@ -17,18 +17,22 @@ public class UiGameOverMenu : MonoBehaviour
 
     private void Awake()
     {
-        btnRestart.onClick.AddListener(OnRetryClicked);
+        btnRestart.onClick.AddListener(OnRestartClicked);
         btnExit.onClick.AddListener(OnExitClicked);
+    }
 
-        GameManager.Instance.onGameOver += GameOver;
+    private void Update()
+    {
+        if (GameManager.Instance.GetIsGameOverState())
+        {
+            GameOver();
+        }
     }
 
     private void OnDestroy()
     {
         btnRestart.onClick.RemoveAllListeners();
         btnExit.onClick.RemoveAllListeners();
-
-        GameManager.Instance.onGameOver -= GameOver;
     }
 
     private void GameOver()
@@ -44,7 +48,7 @@ public class UiGameOverMenu : MonoBehaviour
     }
 
     // Eventos de botones
-    private void OnRetryClicked()
+    private void OnRestartClicked()
     {
         // Reanudo el tiempo del juego
         Time.timeScale = 1;
@@ -54,6 +58,8 @@ public class UiGameOverMenu : MonoBehaviour
 
         // Desactivo el panel de GameOver
         canvasGameOver.SetActive(false);
+
+        GameManager.Instance.ResetGameState();
     }
 
     private void OnExitClicked()
@@ -66,5 +72,7 @@ public class UiGameOverMenu : MonoBehaviour
 
         // Cargo la escena "MainMenu"
         SceneManager.LoadScene("MainMenu");
+
+        GameManager.Instance.ResetGameState();
     }
 }

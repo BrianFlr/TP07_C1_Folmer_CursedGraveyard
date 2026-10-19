@@ -3,24 +3,24 @@ using UnityEngine;
 
 public class UiPlayerPoints : MonoBehaviour
 {
+    [SerializeField] private PlayerPoints playerPoints;
+
     [Header("Canvas Player Points Text")]
     [SerializeField] private TMP_Text textPoints;
 
     private void Awake()
     {
-        GameManager.Instance.onPlayerPointsChange += ShowPlayerPoints;
+        playerPoints.onPlayerPointsChange += ShowPlayerPoints;
     }
 
     private void OnDestroy()
     {
-        GameManager.Instance.onPlayerPointsChange -= ShowPlayerPoints;
+        playerPoints.onPlayerPointsChange += ShowPlayerPoints;
     }
 
     private void ShowPlayerPoints()
     {
-        Debug.Log("Me ejecuté");
-
         // Muestro los puntos del player
-        textPoints.text = GameManager.Instance.GetPlayerPoints().ToString("0");
+        textPoints.text = playerPoints.GetPlayerPointsValue().ToString("0");
     }
 }

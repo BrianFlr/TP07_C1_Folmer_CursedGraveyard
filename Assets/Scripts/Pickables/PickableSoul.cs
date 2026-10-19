@@ -4,7 +4,7 @@ using UnityEngine;
 public class PickableSoul : Pickables
 {
     [SerializeField] PickablesDataSo data;
-    private float pointsToAdd = 0f;
+    [SerializeField] private float pointsToAdd = 0f;
 
     private void Start()
     {
