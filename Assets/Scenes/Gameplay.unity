@@ -3284,7 +3284,7 @@ GameObject:
   - component: {fileID: 527447576}
   - component: {fileID: 527447577}
   m_Layer: 0
-  m_Name: EnemySoul
+  m_Name: Soul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28683,7 +28683,7 @@ GameObject:
   - component: {fileID: 2063345856}
   - component: {fileID: 2063345857}
   m_Layer: 0
-  m_Name: EnemySoulVisual
+  m_Name: SoulVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

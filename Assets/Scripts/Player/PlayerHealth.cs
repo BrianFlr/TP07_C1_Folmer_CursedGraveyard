@@ -5,7 +5,6 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private PlayerDataSo playerData;
     [SerializeField] private Image fillHealthBar;
-    [SerializeField] private GameObject enemyDeathEffectPrefab;
 
     private float health = 0f;
 
@@ -14,16 +13,23 @@ public class PlayerHealth : MonoBehaviour
         health = playerData.health;
     }
 
+    // Función para añadir vida.
+    public void AddHealth(float healthAmount)
+    {
+        health += healthAmount;
+        fillHealthBar.fillAmount = health / playerData.health;
+    }
+
     // Función para recibir daño.
     public void ReceiveDamage(float damageAmount)
     {
         health -= damageAmount;
         fillHealthBar.fillAmount = health / playerData.health;
 
-        Die();
+        GameOver();
     }
 
-    private void Die()
+    private void GameOver()
     {
         if (health < 1)
         {
