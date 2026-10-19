@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6a13129489d57604bad34997ff89dccf
+guid: 6793448406bb1414387aa6f46debd67e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7740206411072127715
-    second: enemy-soul-3_0
-  - first:
-      213: -959008369530283646
-    second: enemy-soul-3_1
+      213: -3678666176711464242
+    second: Cyan Fire7_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy-soul-3_0
+      name: Cyan Fire7_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 18
-        width: 6
-        height: 13
+        x: 6
+        y: 0
+        width: 19
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1d38db4743459490800000000000000
-      internalID: -7740206411072127715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy-soul-3_1
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 4
-        width: 26
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 289558d08fae0b2f0800000000000000
-      internalID: -959008369530283646
+      spriteID: eca6ed94a90c2fcc0800000000000000
+      internalID: -3678666176711464242
       vertices: []
       indices: 
       edges: []
@@ -186,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy-soul-3_0: -7740206411072127715
-      enemy-soul-3_1: -959008369530283646
+      Cyan Fire7_0: -3678666176711464242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
