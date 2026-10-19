@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemiesDataSo
   skeletonHealth: 15
   skeletonSpeed: 2
-  ghostHealth: 25
-  ghostSpeed: 0.5
-  ghostAggroRange: 5.5
+  ghostHealth: 30
+  ghostSpeed: 2
+  ghostAggroRange: 5
