@@ -3,13 +3,7 @@ using UnityEngine;
 public class PickableHealth : Pickables
 {
     [SerializeField] PickablesDataSo data;
-    private PlayerHealth playerHealth;
-    private float healthToAdd;
-
-    private void Awake()
-    {
-        playerHealth = GetComponent<PlayerHealth>();
-    }
+    private float healthToAdd = 0f;
 
     private void Start()
     {
@@ -18,7 +12,7 @@ public class PickableHealth : Pickables
 
     public override void Pick()
     {
-        playerHealth.AddHealth(healthToAdd);
+        //GameManager.Instance.AddHealth(healthToAdd);
         Destroy(gameObject);
     }
 }
