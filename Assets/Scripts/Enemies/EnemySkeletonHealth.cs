@@ -7,7 +7,7 @@ public class EnemySkeletonHealth : MonoBehaviour
     [SerializeField] private Image fillHealthBar;
     [SerializeField] private GameObject enemyDeathEffectPrefab;
 
-    [SerializeField] private float health = 0f;
+    private float health = 0f;
 
     private void Start()
     {

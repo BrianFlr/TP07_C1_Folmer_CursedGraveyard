@@ -61,6 +61,19 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * rayCastLength);
     }
 
+    // Función para rotar al player.
+    private void RotatePlayer()
+    {
+        if(rb.linearVelocityX < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+
     public bool GetIsGroundState()
     {
         return isGround;
