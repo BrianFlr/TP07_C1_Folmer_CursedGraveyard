@@ -1,13 +1,24 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PickableHealth : Pickables
 {
-    //[SerializeField] 
+    [SerializeField] PickablesDataSo data;
+    private PlayerHealth playerHealth;
+    private float healthToAdd;
+
+    private void Awake()
+    {
+        playerHealth = GetComponent<PlayerHealth>();
+    }
+
+    private void Start()
+    {
+        healthToAdd = data.healthToAdd;
+    }
 
     public override void Pick()
     {
-        //PlayerHealth.AddHealth();
+        playerHealth.AddHealth(healthToAdd);
         Destroy(gameObject);
     }
 }

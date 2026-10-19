@@ -7,7 +7,7 @@ public class EnemySkeletonMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool isFrontLimit = false;
-    [SerializeField] private float speed = 0;
+    private float speed = 0;
     private float rayCastLength = 0.65f;
 
     private void Awake()

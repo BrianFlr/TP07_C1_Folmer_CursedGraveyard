@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7972211505824085945}
   - component: {fileID: 4879384875095609189}
   - component: {fileID: 7153532559400489176}
+  - component: {fileID: 7081738955343926603}
   - component: {fileID: 5726487898145123082}
   - component: {fileID: 7136647742217497830}
   m_Layer: 9
@@ -53,7 +54,6 @@ MonoBehaviour:
   layerDirectionChanger:
     serializedVersion: 2
     m_Bits: 2048
-  speed: 0
 --- !u!114 &7153532559400489176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +69,19 @@ MonoBehaviour:
   skeletonData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
   fillHealthBar: {fileID: 3151391203946097233}
   enemyDeathEffectPrefab: {fileID: 7950310286711008598, guid: c2ecf66f77a0b8f4cac0e9feb15f99dd, type: 3}
+--- !u!114 &7081738955343926603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956827665592062969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fd29096c7c39249b5cf830d7fda98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySkeletonDamage
+  skeletonData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
 --- !u!70 &5726487898145123082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

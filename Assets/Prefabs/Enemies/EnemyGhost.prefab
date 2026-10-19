@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5359286921349477502}
   - component: {fileID: 444340194699823786}
   - component: {fileID: 4805579185359964578}
+  - component: {fileID: 8805749705505601967}
   - component: {fileID: 717309523659667768}
   - component: {fileID: 6021283743688269603}
   m_Layer: 9
@@ -100,6 +101,19 @@ MonoBehaviour:
   ghostData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
   healthBar: {fileID: 1907483765270054637}
   enemyDeathEffectPrefab: {fileID: 7950310286711008598, guid: c2ecf66f77a0b8f4cac0e9feb15f99dd, type: 3}
+--- !u!114 &8805749705505601967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844492608794716435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46e5e0e04adf944b89cd173dfcdd2fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGhostDamage
+  ghostData: {fileID: 11400000, guid: 4b4867ca8586a2f49bf751f0571a8fb2, type: 2}
 --- !u!70 &717309523659667768
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

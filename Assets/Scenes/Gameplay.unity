@@ -3234,7 +3234,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1028595, y: 0.038029432, z: -10}
+  m_LocalPosition: {x: -0.10372162, y: 0.038029432, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3747,18 +3747,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7735849, g: 0.010217119, b: 0.010217119, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: dac669bb81d6d444dad789938126137a, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -5088,6 +5088,7 @@ GameObject:
   - component: {fileID: 800262581}
   - component: {fileID: 800262582}
   - component: {fileID: 800262584}
+  - component: {fileID: 800262585}
   - component: {fileID: 800262583}
   - component: {fileID: 800262580}
   - component: {fileID: 800262579}
@@ -5224,6 +5225,20 @@ MonoBehaviour:
   projectilesData: {fileID: 11400000, guid: 07eedaed2791f024881f18524481a544, type: 2}
   daggerPool: {fileID: 1001322632}
   throwPoint: {fileID: 442289065}
+--- !u!114 &800262585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800262578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa85c2dadc280bb4ab685ec1c36dc32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerData: {fileID: 11400000, guid: 938c5b8782210264ba413eb9b2af8e70, type: 2}
+  fillHealthBar: {fileID: 585286933}
 --- !u!1 &800566142
 GameObject:
   m_ObjectHideFlags: 0
@@ -8640,7 +8655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3433962, g: 0.16262722, b: 0.16262722, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12460,6 +12475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1210048945}
   - {fileID: 1415034027}
   - {fileID: 578308225}
   - {fileID: 1353878412}
@@ -12478,7 +12494,6 @@ Transform:
   - {fileID: 1843385014}
   - {fileID: 265894039}
   - {fileID: 2143737792}
-  - {fileID: 1210048945}
   m_Father: {fileID: 56006360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427308251
