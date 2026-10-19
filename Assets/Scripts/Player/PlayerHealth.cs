@@ -1,10 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public event Action onPlayerHealthChange;
+
     [SerializeField] private PlayerDataSo playerData;
-    [SerializeField] private Image fillHealthBar;
 
     private float maxHealth = 0f;
     private float health = 0f;
@@ -19,16 +21,28 @@ public class PlayerHealth : MonoBehaviour
     public void AddHealth(float healthAmount)
     {
         health = Mathf.Clamp(health + healthAmount, 0, maxHealth);
-        fillHealthBar.fillAmount = health / playerData.health;
+
+        onPlayerHealthChange?.Invoke();
     }
 
     // Función para recibir daño.
     public void ReceiveDamage(float damageAmount)
     {
         health -= damageAmount;
-        fillHealthBar.fillAmount = health / playerData.health;
+
+        onPlayerHealthChange?.Invoke();
 
         GameOver();
+    }
+
+    public float GetHealthValue()
+    {
+        return health;
+    }
+
+    public float GetMaxHealthValue()
+    {
+        return maxHealth;
     }
 
     private void GameOver()

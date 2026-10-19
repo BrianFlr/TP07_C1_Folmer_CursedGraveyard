@@ -3548,8 +3548,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1168425600}
   - {fileID: 1333616539}
+  - {fileID: 1168425600}
   m_Father: {fileID: 1206158540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5552,7 +5552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   playerData: {fileID: 11400000, guid: 938c5b8782210264ba413eb9b2af8e70, type: 2}
-  fillHealthBar: {fileID: 585286933}
 --- !u!114 &800262586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10810,7 +10809,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1206158540}
   - component: {fileID: 1206158539}
-  - component: {fileID: 1206158538}
   - component: {fileID: 1206158537}
   - component: {fileID: 1206158536}
   - component: {fileID: 1206158535}
@@ -10898,20 +10896,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiPlayerPoints
   textPoints: {fileID: 1832978214}
---- !u!114 &1206158538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206158533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d85408c5e3fa15f4599081906a0637c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UiPlayerPowerUp
-  panelPowerUp: {fileID: 0}
-  textTimePowerUp: {fileID: 0}
 --- !u!114 &1206158539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10924,11 +10908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b001e89bd017545868d59594deb5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiPlayerHealth
-  data: {fileID: 11400000, guid: c53644c05cff45447929de5d26522050, type: 2}
-  heartList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  playerHealth: {fileID: 800262585}
+  fillHealthBar: {fileID: 585286933}
+  maxHealth: 0
 --- !u!224 &1206158540
 RectTransform:
   m_ObjectHideFlags: 0

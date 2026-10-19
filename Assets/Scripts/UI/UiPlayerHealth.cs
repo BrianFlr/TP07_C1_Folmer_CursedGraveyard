@@ -1,13 +1,30 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiPlayerHealth : MonoBehaviour
 {
-    [SerializeField] private PlayerDataSo data;
-    [SerializeField] private List<GameObject> heartList = new List<GameObject>();
+    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private Image fillHealthBar;
 
-    private void Update()
+    private float maxHealth = 0f;
+
+    private void Awake()
     {
-        
+        playerHealth.onPlayerHealthChange += UpdateHealthBarFill;
+    }
+
+    private void Start()
+    {
+        maxHealth = playerHealth.GetMaxHealthValue();
+    }
+
+    private void OnDestroy()
+    {
+        playerHealth.onPlayerHealthChange -= UpdateHealthBarFill;
+    }
+
+    private void UpdateHealthBarFill()
+    {
+        fillHealthBar.fillAmount = playerHealth.GetHealthValue() / maxHealth;
     }
 }
