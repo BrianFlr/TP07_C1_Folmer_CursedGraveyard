@@ -31,8 +31,6 @@ public class PlayerHealth : MonoBehaviour
         health -= damageAmount;
 
         onPlayerHealthChange?.Invoke();
-
-        GameOver();
     }
 
     public float GetHealthValue()
@@ -43,13 +41,5 @@ public class PlayerHealth : MonoBehaviour
     public float GetMaxHealthValue()
     {
         return maxHealth;
-    }
-
-    private void GameOver()
-    {
-        if (health < 1)
-        {
-            //GameManager.SetGameOverState(false);
-        }
     }
 }

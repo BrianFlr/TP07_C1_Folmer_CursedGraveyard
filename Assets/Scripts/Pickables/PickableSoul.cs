@@ -13,7 +13,7 @@ public class PickableSoul : Pickables
 
     public override void Pick()
     {
-        //GameManager.Instance.AddPoints();
+        GameManager.Instance.AddPlayerPoints(pointsToAdd);
         Destroy(gameObject);
     }
 }

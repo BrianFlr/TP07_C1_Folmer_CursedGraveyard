@@ -5,11 +5,11 @@ using UnityEngine;
 public class PickablesDataSo : ScriptableObject
 {
     [Header("Pickable Points")]
-    [Range(1, 10)] public float pointsToAdd = 5.0f;
+    [Range(1, 100)] public float pointsToAdd = 10.0f;
 
     [Header("Pickable Health")]
-    [Range(1, 10)] public float healthToAdd = 10.0f;
+    [Range(1, 100)] public float healthToAdd = 15.0f;
 
     [Header("Pickable Damage")]
-    [Range(1, 10)] public float damageToAdd = 10.0f;
+    [Range(1, 100)] public float damageToAdd = 5.0f;
 }

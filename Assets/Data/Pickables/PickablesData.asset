@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad6e40ac0e075342b34376f1ebf0e6f, type: 3}
   m_Name: PickablesData
   m_EditorClassIdentifier: Assembly-CSharp::PickablesDataSo
-  pointsToAdd: 5
-  healthToAdd: 10
-  damageToAdd: 10
+  pointsToAdd: 10
+  healthToAdd: 15
+  damageToAdd: 5

@@ -12,38 +12,35 @@ public class UiGameOverMenu : MonoBehaviour
     [SerializeField] private TMP_Text textPlayerPoints;
 
     [Header("Buttons")]
-    [SerializeField] private Button btnRetry;
+    [SerializeField] private Button btnRestart;
     [SerializeField] private Button btnExit;
 
     private void Awake()
     {
+        btnRestart.onClick.AddListener(OnRetryClicked);
         btnExit.onClick.AddListener(OnExitClicked);
-        btnRetry.onClick.AddListener(OnRetryClicked);
-    }
 
-    private void Update()
-    {
-        // Si la vida del jugador llegó a 0
-        /*if (GameManager.Instance.GetGameOverState())
-        {
-            // Detengo el juego
-            Time.timeScale = 0;
-
-            // Muestro los puntos del player
-            textPlayerPoints.text = GameManager.Instance.GetPlayerPoints().ToString("0");
-
-            // Activo el canvas de ganar o empatar
-            canvasGameOver.SetActive(true);
-
-            // Reseteo el estado de GameOver
-            GameManager.Instance.ResetGameOverState();
-        }*/
+        GameManager.Instance.onGameOver += GameOver;
     }
 
     private void OnDestroy()
     {
+        btnRestart.onClick.RemoveAllListeners();
         btnExit.onClick.RemoveAllListeners();
-        btnRetry.onClick.RemoveAllListeners();
+
+        GameManager.Instance.onGameOver -= GameOver;
+    }
+
+    private void GameOver()
+    {
+        // Detengo el juego.
+        Time.timeScale = 0;
+
+        // Muestro los puntos del player.
+        textPlayerPoints.text = GameManager.Instance.GetPlayerPoints().ToString("0");
+
+        // Activo el canvas de ganar o perder.
+        canvasGameOver.SetActive(true);
     }
 
     // Eventos de botones
