@@ -11,5 +11,5 @@ public class PickablesDataSo : ScriptableObject
     [Range(1, 100)] public float healthToAdd = 15.0f;
 
     [Header("Pickable Damage")]
-    [Range(1, 100)] public float damageToAdd = 5.0f;
+    [Range(1, 100)] public float damageToAdd = 2.0f;
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,7 +7,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private PlayerPoints playerPoints;
-    //[SerializeField] private DaggerProjectile daggerProjectile;
+
+    private float damageBoost = 0f;
     private int collectableCounter = 0;
     private bool isGameWin = false;
     private bool isGameOver = false;
@@ -78,5 +80,20 @@ public class GameManager : MonoBehaviour
     public float GetPlayerPoints()
     {
         return playerPoints.GetPlayerPointsValue();
+    }
+
+    internal void AddPlayerHealth(float healthAmount)
+    {
+        playerHealth.AddHealth(healthAmount);
+    }
+
+    public void AddBoostDamage(float damageBoostAmount)
+    {
+        damageBoost += damageBoostAmount;
+    }
+
+    public float GetDamageBoost()
+    {
+        return damageBoost;
     }
 }

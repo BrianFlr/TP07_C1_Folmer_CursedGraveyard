@@ -12,7 +12,7 @@ public class PickableHealth : Pickables
 
     public override void Pick()
     {
-        //GameManager.Instance.AddHealth(healthToAdd);
+        GameManager.Instance.AddPlayerHealth(healthToAdd);
         Destroy(gameObject);
     }
 }

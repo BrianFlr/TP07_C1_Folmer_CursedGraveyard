@@ -23,7 +23,7 @@ public class DaggerProjectile : MonoBehaviour
     private void OnEnable()
     {
         daggerSpeed = data.daggerSpeed;
-        daggerDamage = data.daggerDamage;
+        daggerDamage = data.daggerDamage + GameManager.Instance.GetDamageBoost();
         daggerLifeTime = data.daggerLifeTime;
     }
 
@@ -70,6 +70,4 @@ public class DaggerProjectile : MonoBehaviour
         transform.right = direction;
         rb.AddForce(direction * daggerSpeed, ForceMode2D.Impulse);
     }
-
-    
 }

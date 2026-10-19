@@ -12,7 +12,7 @@ public class PickableDamage : Pickables
 
     public override void Pick()
     {
-        //GameManager.Instance.AddDamage(damageToAdd);
+        GameManager.Instance.AddBoostDamage(damageToAdd);
         Destroy(gameObject);
     }
 }
